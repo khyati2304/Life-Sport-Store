@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Purchase</title>
+</head>
+<body>
+<div class="header">
+        <img src="logo.png" width="100" alt="life sport store" />
+                     <h1>Life Sport Store</h1>
+    </div>
+<div class="main" >
+     <h1>Welcome to LifeSport Store!!</h1>
+    	            <h2>This is the best place to shop !!</h2>
+
+                        <div>
+                            <hr/>
+
+                            <div class="navbar" style="background-color: cornflowerblue">
+	  <div class="navbar-inner">
+	    <ul class="nav nav-tabs">
+	      <li ><a href="index.html" data-toggle="tab">Home</a></li>
+	      <li ><a href="about.html" data-toggle="tab">About</a></li>
+	      <li><a href="myacct.html" data-toggle="tab">My Account</a></li>
+	      <li class="active"><a href="purchase.html" data-toggle="tab">Purchase Online</a></li>
+
+	    </ul>
+	  </div>
+                                </div>
+                            </br>
+                            <hr/>
+
+    <div class="purchaseform">
+    Name<span style="color: red;">*</span>:
+  <input type="text" id="fName" name="firstname" class="name" >
+  <br>
+  Email<span style="color: red;">*</span>:
+  <input type="text" id="lName" name="lastname" class="name">
+  <br>
+
+    Method of Payment<span style="color: red;">*</span>:
+    <input type="radio" name="card" id="credit" value="Credit"> Credit
+    <input type="radio" name="card" id="debit" value="Debit"> Debit
+    <br>
+    Item to Purchase<span style="color: red;">*</span>:
+    <input id="purchase" type="text" name="item"><br>
+     Address:
+    <input id="address" type="text" name="address" class="address" ><br>
+    Receive email updates about upcoming new promotion and arrival products:
+    <input type="checkbox" name="check"><br><br>
+  <input type="submit" value="Submit" onclick="validation()">
+ <p id="demo" style="color: red;"></p>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    function validation() {
+  var inpObj = document.getElementById("fName");
+   var inpObj1 = document.getElementById("lName");
+ var inpObj2 = document.getElementById("purchase");
+ var inpObj3 = document.getElementById("address");
+  if (inpObj.value == "" || inpObj.value == null) {
+    document.getElementById("demo").innerHTML = "Please Enter Name";
+  } else if(inpObj1.value == "" || inpObj1.value == null) {
+    document.getElementById("demo").innerHTML = "Please Enter Email";
+  }
+
+   else if((document.getElementById("credit").checked != true)&&(document.getElementById("debit").checked != true))
+         document.getElementById("demo").innerHTML = "Please Select credit or debit card";
+   else if(inpObj2.value == "" || inpObj2.value == null) {
+    document.getElementById("demo").innerHTML = "Please Enter Purchase";
+  }
+   else{
+       alert("Your Order was successfully submitted!");
+
+  }
+}
+</script>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Clothing</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="logo.png" width="100" alt="life sport store" />
+                     <h1>Life Sport Store</h1>
+    </div>
+
+    <div class="main">
+                    <h1>Welcome to LifeSport Store!!</h1>
+    	            <h2>This is the best place to shop !!</h2>
+
+                        <div>
+                            <hr/>
+
+                              <div class="navbar" style="background-color: cornflowerblue">
+	  <div class="navbar-inner">
+	    <ul class="nav nav-tabs">
+	      <li ><a href="index.html" data-toggle="tab">Home</a></li>
+	      <li ><a href="about.html" data-toggle="tab">About</a></li>
+	      <li><a href="myacct.html" data-toggle="tab">My Account</a></li>
+	      <li class="active"><a href="purchase.html" data-toggle="tab">Purchase Online</a></li>
+
+	    </ul>
+	  </div>
+                        </div>
+
+         </br>
+                                <hr/>
+
+        <button class="collapsible">Men</button>
+    <div class="content">
+      <ol class="c" >
+            <li onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=m_tshirt'"><img style=" width: 100px;height: 120px;margin:10px;" class="image" src="../Images/Resize/Men_Shirts.jpg" /></li>
+  <li onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=m_short'"><img style=" width: 100px;height: 120px;margin:10px;" class="image"  src="../Images/Resize/Men_Bottom.jpg" /></li>
+            <li onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=m_jacket'"><img style=" width: 100px;height: 120px;margin:10px;" class="image"  src="../Images/Resize/p08tv277500w.jpg" /></li>
+  <li onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=m_swim'"><img style=" width: 100px;height: 120px;margin:10px;" class="image"  src="../Images/Resize/332216809_01_a.jpg" /></li>
+            <li onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=m_gym'"><img style=" width: 100px;height: 120px;margin:10px;" class="image"  src="../Images/Resize/item_L_34799962_134962080.jpg" /></li>
+        </ol>
+    </div>
+        <button class="collapsible">Women</button>
+    <div class="content" >
+        <ol class="c" >
+            <li onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=w_tank'"><img style=" width: 100px;height: 120px;margin:10px;" class="image" src="../Images/Resize/Women_Tank.jpg" /></li>
+  <li onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=w_tshirt'"><img  style=" width: 100px;height: 120px;margin:10px;" class="image" src="../Images/Resize/Women_T.Shirt.jpg" /></li>
+            <li onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=w_short'"><img style=" width: 100px;height: 120px;margin:10px;" class="image"  src="../Images/Resize/Women_Shorts.jpg" /></li>
+  <li onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=w_capri'"><img style=" width: 100px;height: 120px;margin:10px;" class="image"  src="../Images/Resize/Women_Capris.jpg" /></li>
+            <li onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=w_sweats'"><img  style=" width: 100px;height: 120px;margin:10px;" class="image" src="../Images/Resize/Women_Sweats.jpg" /></li>
+  <li onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=w_Tigh'"><img  style=" width: 100px;height: 120px;margin:10px;" class="image" src="../Images/Resize/Women_Tights.pants.jpg" /></li>
+            <li    onclick="location.href='http://localhost:63342/mysiteS19/mysiteS19/ProductDis.html?product=w_jacket'"><img style=" width: 100px;height: 120px;margin:10px;" class="image"  src="../Images/Resize/Women_Jackets.jpg" /></li>
+
+        </ol>
+</ol>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
